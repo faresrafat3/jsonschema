@@ -1113,3 +1113,6 @@ class TestJsonPathRendering(TestCase):
 
     def test_open_bracket(self):
         self.validate_json_path_rendering("[", "$['[']")
+
+    def test_newline(self):
+        self.validate_json_path_rendering("x\n", "$['x\n']")
